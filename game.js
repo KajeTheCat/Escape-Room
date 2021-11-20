@@ -29,8 +29,36 @@
 //     , answer: 3
 //   }
 //   , {
-//     question: `A duck was given $9, a spider was given $36, a bee was given $27. Based off of this information, how much money would be given to a cat?`
-//     , answer: 18
+//     question: `I’m tall when I’m young, and I’m short when I’m old. What am I?`
+//     , answer: candle
+//   }
+//   , {
+//     question: `I follow you all the time and copy your every move, but you can’t touch me or catch me. What am I?`
+//     , answer: shadow
+//   }
+//   , {
+//     question: `What has one eye, but can’t see?`
+//     , answer: needle
+//   }
+//   , {
+//     question: `What has a head and a tail but no body?`
+//     , answer: coin
+//   }
+//   , {
+//     question: `What begins with an “e” and only contains one letter?`
+//     , answer: envelope
+//   }
+//   , {
+//     question: `A word I know, six letters it contains, remove one letter and 12 remains. What is it?`
+//     , answer: Dozens
+//   }
+//   , {
+//     question: `Two in a corner, one in a room, zero in a house, but one in a shelter. What is it?`
+//     , answer: R
+//   }
+//   , {
+//     question: `What begins with T, ends with T, and is full of T?`
+//     , answer: Teapot
 //   }
 // ];
 
