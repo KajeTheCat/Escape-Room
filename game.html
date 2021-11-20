@@ -11,18 +11,25 @@
 </head>
 
 <body>
-    <div id='balloonDiv'>
-        <div id='balloonOne'></div>
-        <div id='balloonTwo'></div>
-        <div id='balloonThree'></div>
+    <div>
+        <div class='time'>
+            <span id='countdown'>
+            </span>
+            <div class='combination key'></div>
+        </div>
+        <div class='lock-combination'></div>
     </div>
-
-    <img src="imgs/openJack.png" alt="open jack" id="open-jack">
-    <img src="imgs/closedBook.png" alt="closed book" id='closed-book'>
-    <img src="imgs/openTreasure.png" alt="open box" id='open-box'>
-    <img src="imgs/closedDoor.png" alt="exit" id='exit'>
-
-    <script src="js/game.js"></script>
+    <div class='game-div'>
+        <div class='game-room'>
+        </div>
+        <div class='room-options'>
+            <div class='entry' tabindex='-1'></div>
+            <div class='hall' tabindex='-1'></div>
+            <div class='sarco' tabindex='-1'></div>
+            <div class='stairs' tabindex='-1'></div>
+        </div>
+    </div>
 </body>
+<script src="game.js"></script>
 
 </html>
