@@ -9,74 +9,69 @@ let pyramidFour = document.querySelector('#pyramidFour');
 
 let questionDb = [
   {
-    question: `In reply to an inquiry about the animals on his farm, the farmer says: “I only ever keep sheep, goats, and horses. In fact, at the moment they are all sheep bar three, all goats bar four, and all horses bar five.” How many goats does he have?`
+    question: 'In reply to an inquiry about the animals on his farm, the farmer says: “I only ever keep sheep, goats, and horses. In fact, at the moment they are all sheep bar three, all goats bar four, and all horses bar five.” How many goats does he have?'
     , answer: 2
   }
   , {
-    question: `If a hen and a half lay an egg and a half in a day and a half, how many eggs will half a dozen hens lay in half a dozen days?`
+    question: 'If a hen and a half lay an egg and a half in a day and a half, how many eggs will half a dozen hens lay in half a dozen days?'
     , answer: 24
   }
   , {
-    question: `My twin lives at the reverse of my house number. The difference between our house numbers ends in two. What are the lowest possible numbers of our house numbers?`
+    question: 'My twin lives at the reverse of my house number. The difference between our house numbers ends in two. What are the lowest possible numbers of our house numbers?'
     , answer: 72
   }
   , {
-    question: `I have a calculator that can display ten digits. How many different ten-digit numbers can I type using just the 0-9 keys once each, and moving from one keypress to the next using the knight’s move in chess?`
+    question: 'I have a calculator that can display ten digits. How many different ten-digit numbers can I type using just the 0-9 keys once each, and moving from one keypress to the next using the knight’s move in chess?'
     , answer: 4
   }
   , {
-    question: `A grandfather, two fathers and two sons went to the movie theater together and everyone bought one movie ticket each. How many tickets did they buy in total?`
+    question: 'A grandfather, two fathers and two sons went to the movie theater together and everyone bought one movie ticket each. How many tickets did they buy in total?'
     , answer: 3
   }
   , {
-    question: `I’m tall when I’m young, and I’m short when I’m old. What am I?`
-    , answer: 'candle'
+    question: 'I’m tall when I’m young, and I’m short when I’m old. What am I?'
+    , answer: 'Candle'
   }
   , {
-    question: `I follow you all the time and copy your every move, but you can’t touch me or catch me. What am I?`
-    , answer: 'shadow'
+    question: 'I follow you all the time and copy your every move, but you can’t touch me or catch me. What am I?'
+    , answer: 'Shadow'
   }
   , {
-    question: `What has one eye, but can’t see?`
+    question: 'What has one eye, but can’t see?'
     , answer: 'Needle'
   }
   , {
-    question: `What has a head and a tail but no body?`
+    question: 'What has a head and a tail but no body?'
     , answer: 'Coin'
   }
   , {
-    question: `What begins with an “e” and only contains one letter?`
+    question: 'What begins with an “e” and only contains one letter?'
     , answer: 'Envelope'
   }
   , {
-    question: `A word I know, six letters it contains, remove one letter and 12 remains. What is it?`
-    , answer: 'dozens'
+    question: 'A word I know, six letters it contains, remove one letter and 12 remains. What is it?'
+    , answer: 'Dozens'
   }
   , {
-    question: `Two in a corner, one in a room, zero in a house, but one in a shelter. What is it?`
+    question: 'Two in a corner, one in a room, zero in a house, but one in a shelter. What is it?'
     , answer: 'R'
   }
   , {
-    question: `What begins with T, ends with T, and is full of T?`
+    question: 'What begins with T, ends with T, and is full of T?'
     , answer: 'Teapot'
   }
 ];
 
-
 function renderGreenLight() {
-  alert('your answer is correct');
   if (correctAnswerCounter == 4) {
     pyramidFour.style.color = '#34eb7a';
-    console.log(correctAnswerCounter);
+    alert('you have collected the pharoh’s treasure!');
   } else if (correctAnswerCounter == 3) {
     pyramidThree.style.color = '#34eb7a';
-    console.log(correctAnswerCounter);
   } else if (correctAnswerCounter == 2) {
     pyramidTwo.style.color = '#34eb7a';
-    console.log(correctAnswerCounter);
   } else if (correctAnswerCounter == 1) {
     pyramidOne.style.color = '#34eb7a';
-    console.log(correctAnswerCounter);
   }
 }
 let correctAnswerCounter = 0;
@@ -166,8 +161,8 @@ function tick() {
   }
   let mins = Math.floor(secs / 60);
   secs %= 60;
-  let time = ((mins < 10) ? "0" : "") + mins + ":" + ((secs < 10) ? "0" : "") + secs;
-  if (time.toString() === "00:00") {
+  let time = ((mins < 10) ? '0' : '') + mins + ':' + ((secs < 10) ? '0' : '') + secs;
+  if (time.toString() === '00:00') {
     gameOver();
   }
   let countdown = document.querySelector('#countdown');
