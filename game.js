@@ -98,6 +98,11 @@
 // openjack.addEventListener('click', jackPuzzle);
 
 
+let symbolImages = [
+  'imgs/symbolOne.png',
+  'imgs/symbolTwo.png'
+];
+
 let gameRoom = document.querySelector('.game-room');
 let entry = document.querySelector('.entry');
 let hall = document.querySelector('.hall');
@@ -108,24 +113,28 @@ function entrySwitch() {
   gameRoom.style.background = "url('imgs/entry.jpg')";
   gameRoom.style.backgroundSize = 'cover';
   gameRoom.style.transitionDuration = '1s';
+  renderSymbols();
 }
 
 function hallSwitch() {
   gameRoom.style.background = "url('imgs/hall.jpg')";
   gameRoom.style.backgroundSize = 'cover';
   gameRoom.style.transitionDuration = '1s';
+  renderSymbols();
 }
 
 function sarcoSwitch() {
-  gameRoom.style.background = "url('imgs/sarcophagus.jpg')";
+  gameRoom.style.background = "url('imgs/sarcophagus.jpeg')";
   gameRoom.style.backgroundSize = 'cover';
   gameRoom.style.transitionDuration = '1s';
+  renderSymbols();
 }
 
 function stairsSwitch() {
   gameRoom.style.background = "url('imgs/stairs.jpg')";
   gameRoom.style.backgroundSize = 'cover';
   gameRoom.style.transitionDuration = '1s';
+  renderSymbols();
 }
 
 entry.addEventListener('click', entrySwitch);
@@ -136,7 +145,47 @@ stairs.addEventListener('click', stairsSwitch);
 
 let timeInSecs;
 let ticker;
-let h1 = document.querySelector;
+function startTimer(secs) {
+  timeInSecs = parseInt(secs);
+  ticker = setInterval('tick()', 1000);
+}
 
+function gameOver() {
+  alert('Game Over');
+}
+
+function tick() {
+  let secs = timeInSecs;
+  if (secs > 0) {
+    timeInSecs--;
+  } else {
+    clearInterval(ticker);
+  }
+  let mins = Math.floor(secs / 60);
+  secs %= 60;
+  let time = ((mins < 10) ? "0" : "") + mins + ":" + ((secs < 10) ? "0" : "") + secs;
+  if (time.toString() === "00:00") {
+    gameOver();
+  }
+  let countdown = document.querySelector('#countdown');
+  countdown.textContent = time;
+}
+
+
+function renderSymbols() {
+  let img = document.querySelector('#symbols');
+  console.log(img)
+  let randomNum = Math.floor(Math.random() * symbolImages.length);
+  img.src = 'imgs/symbolOne.png';
+  let xPos = Math.floor(Math.random() * 1100);
+  let yPos = Math.floor(Math.random() * 700);
+  img.style.top = yPos + 'px';
+  img.style.left = xPos + 'px';
+}
+
+
+
+
+startTimer(600);
 
 
