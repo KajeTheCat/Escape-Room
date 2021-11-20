@@ -202,7 +202,7 @@ function tick() {
 
 function renderSymbols() {
   let img = document.querySelector('#symbols');
-  console.log(img)
+  console.log(img);
   let randomNum = Math.floor(Math.random() * symbolImages.length);
   img.src = 'imgs/symbolOne.png';
   let xPos = Math.floor(Math.random() * 1100);
