@@ -1,102 +1,75 @@
-body {
-    background-color: lightgrey;
+body{
+    background-color: whitesmoke;
 }
 
-#closed-book {
-    width: 250px
-}
-
-#closed-book:hover {
-    transform: scale(1.1);
-    margin: 10px;
-}
-
-#closed-book:active {
-    transform: scale(1);
-}
-
-#open-jack {
-    width: 250px;
-    margin: 10px;
-}
-
-#open-jack:hover {
-    transform: scale(1.1);
-}
-
-#open-jack:active {
-    transform:scale(1);
-}
-
-#open-box {
-    width: 250px;
-}
-
-#open-box:hover {
-    transform: scale(1.1);
-}
-
-#open-box:active {
-    transform: scale(1);
-}
-
-#balloonDiv {
+.game-div{
+    width: 90%;
+    height: 800px;
     display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.room-options{
+    width: 350px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items:center;
-    align-content: center;
-    width: 400px;
-    height: 150px;
 }
 
-#balloonOne,
-#balloonTwo,
-#balloonThree {
-    width: 80px;
-    height: 80px;
-    border: 0.5px solid black;
-    border-radius: 50%;
-    margin: 1rem;
+.game-room{
+    width:80%;
+    height: 800px;
+    background-image: url('../imgs/entry.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition-duration: 1s;
 }
 
-#balloonOne{
-    background-color: red;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+.entry,
+.hall,
+.sarco,
+.stairs{
+    height: 180px;
+    margin-left: 20px;
 }
 
-#balloonTwo{
-    background-color: blue;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+.entry{
+    background: url('../imgs/entry.jpg');
+    background-size: cover;
 }
 
-#balloonThree{
-    background-color: yellow;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+.hall{
+    background: url('../imgs/hall.jpg');
+    background-size: cover;
 }
 
-p {
-    font-weight: bold;
-    font-size: 1.5rem;
+.sarco{
+    background: url('../imgs/sarcophagus.png');
+    background-size: cover;
 }
 
-#exit {
-    float: right;
-    width:250px;
+.stairs{
+    background: url('../imgs/stairs.jpg');
+    background-size: cover;
 }
 
-#exit:hover {
-    transform: scale(1.1);
+.entry:hover,
+.hall:hover,
+.sarco:hover,
+.stairs:hover{
+    transform: scale(1.05);
 }
 
-#exit:active {
+.entry:active,
+.hall:active,
+.sarco:active,
+.stairs:active{
     transform: scale(1);
+}
+
+div:focus{
+    outline: 5px solid lightgreen;
 }
