@@ -127,8 +127,11 @@
 
 
 let symbolImages = [
-  'imgs/symbolOne.png',
-  'imgs/symbolTwo.png'
+  'imgs/symbolThree.png',
+  'imgs/symbolFour.png',
+  'imgs/symbolFive.png',
+  'imgs/symbolSix.png',
+  'imgs/symbolSeven.png'
 ];
 
 let gameRoom = document.querySelector('.game-room');
@@ -140,21 +143,21 @@ let stairs = document.querySelector('.stairs');
 function entrySwitch() {
   gameRoom.style.background = "url('imgs/entry.jpg')";
   gameRoom.style.backgroundSize = 'cover';
-  gameRoom.style.transitionDuration = '1s';
+  gameRoom.style.transitionDuration = '0.5s';
   renderSymbols();
 }
 
 function hallSwitch() {
   gameRoom.style.background = "url('imgs/hall.jpg')";
   gameRoom.style.backgroundSize = 'cover';
-  gameRoom.style.transitionDuration = '1s';
+  gameRoom.style.transitionDuration = '0.5s';
   renderSymbols();
 }
 
 function sarcoSwitch() {
   gameRoom.style.background = "url('imgs/sarcophagus.jpeg')";
   gameRoom.style.backgroundSize = 'cover';
-  gameRoom.style.transitionDuration = '1s';
+  gameRoom.style.transitionDuration = '0.5s';
   renderSymbols();
 }
 
@@ -204,9 +207,9 @@ function renderSymbols() {
   let img = document.querySelector('#symbols');
   console.log(img);
   let randomNum = Math.floor(Math.random() * symbolImages.length);
-  img.src = 'imgs/symbolOne.png';
-  let xPos = Math.floor(Math.random() * 1100);
-  let yPos = Math.floor(Math.random() * 700);
+  img.src = symbolImages[randomNum];
+  let xPos = Math.floor((Math.random() * 1100) + 100);
+  let yPos = Math.floor((Math.random() * 430) + 310);
   img.style.top = yPos + 'px';
   img.style.left = xPos + 'px';
 }
