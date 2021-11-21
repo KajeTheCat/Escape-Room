@@ -14,58 +14,67 @@
 </head>
 
 <body>
-    <nav class='game-nav'></nav>
-    <div class='game-header'>
-        <div class='time'>
-            <span id='countdown'>
-            </span>
+    <main>
+        <nav class='game-nav'></nav>
+        <div class='game-header'>
+            <div class='time'>
+                <span id='countdown'>
+                </span>
+            </div>
+            <div class='pyramid'>
+                <i id='pyramidOne' class="fas fa-caret-up"></i>
+                <i id='pyramidTwo' class="fas fa-caret-up"></i>
+                <i id='pyramidThree' class="fas fa-caret-up"></i>
+                <i id='pyramidFour' class="fas fa-caret-up"></i>
+            </div>
         </div>
-        <div class='pyramid'>
-            <i id='pyramidOne' class="fas fa-caret-up"></i>
-            <i id='pyramidTwo' class="fas fa-caret-up"></i>
-            <i id='pyramidThree' class="fas fa-caret-up"></i>
-            <i id='pyramidFour' class="fas fa-caret-up"></i>
+        <div class='game-div'>
+            <div class='game-room'>
+                <img id='symbols'>
+            </div>
+            <div class='room-options'>
+                <div class='entry' tabindex='-1'></div>
+                <div class='hall' tabindex='-1'></div>
+                <div class='sarco' tabindex='-1'></div>
+                <div class='stairs' tabindex='-1'></div>
+            </div>
         </div>
-    </div>
-    <div class='game-div'>
-        <div class='game-room'>
-            <img id='symbols'>
+        <audio controls autoplay loop>
+            <source src="../gamesound.mp3" type="audio/mpeg">
+        </audio>
+        <div class="victorsDiv">
+            <table class="victorsTable">
+                <thead>
+                    <tr>
+                        <th>Victors</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td><a href='index.html'>Home</a></td>
+                        <td><a href='credits.html'>About Us</a></td>
+                    </tr>
+                </tfoot>
+            </table>
         </div>
-        <div class='room-options'>
-            <div class='entry' tabindex='-1'></div>
-            <div class='hall' tabindex='-1'></div>
-            <div class='sarco' tabindex='-1'></div>
-            <div class='stairs' tabindex='-1'></div>
-        </div>
-    </div>
-    <div class="victorsDiv">
-        <table class="victorsTable">
-            <thead>
-                <tr>
-                <th>Victors</th>
-                <th>Time</th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td><a href='index.html'>Home</a></td>
-                    <td><a href='credits.html'>About Us</a></td>
-                </tr>
-            </tfoot>
-        </table>
-    </div>
 
-    <div class='loserDiv'>
-        <h2>THE PHARAOH HARVESTED YOUR SOUL!</h2>
-        <div class="loserButtons">
-        <h3><a href='index.html'>Home</a></h3>
-        <h3><a href='game.html'>Play Again</a></h3>
-        <h3><a href='credits.html'>Credits</a></h3>
+        <div class='loserDiv'>
+            <h2>THE PHARAOH HARVESTED YOUR SOUL!</h2>
+            <div class="loserButtons">
+                <h3><a href='index.html'>Home</a></h3>
+                <h3><a href='game.html'>Play Again</a></h3>
+                <h3><a href='credits.html'>Credits</a></h3>
+            </div>
         </div>
-    </div>
+    </main>
+    <footer>
+
+    </footer>
 </body>
-<script src="game.js"></script>
+<script src=" game.js">
+</script>
 
 </html>
