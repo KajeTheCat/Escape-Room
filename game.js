@@ -24,8 +24,8 @@ function saveGameFile() {
   localStorage.setItem('victors', stringifiedArr);
 }
 
-function instantiateGamePlayer(name,userTimeScore) {
-  new GamePlayer(name,userTimeScore);
+function instantiateGamePlayer(name, userTimeScore) {
+  new GamePlayer(name, userTimeScore);
   saveGameFile();
 }
 
@@ -85,7 +85,7 @@ let questionDb = [
 ];
 
 function renderVictors() {
-  for (let i=0;i<gamePlayerArr.length;i++) {
+  for (let i = 0; i < gamePlayerArr.length; i++) {
     let tr = document.createElement('tr');
     let tdName = document.createElement('td');
     tdName.textContent = gamePlayerArr[i].name;
@@ -181,6 +181,10 @@ function stairsSwitch() {
   renderSymbols();
 }
 
+window.onload = function () {
+  renderSymbols();
+};
+
 entry.addEventListener('click', entrySwitch);
 hall.addEventListener('click', hallSwitch);
 sarco.addEventListener('click', sarcoSwitch);
@@ -225,4 +229,4 @@ function renderSymbols() {
   img.style.left = xPos + 'px';
 }
 
-startTimer(600);
+startTimer(300);

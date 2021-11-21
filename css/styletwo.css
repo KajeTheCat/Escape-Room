@@ -1,8 +1,22 @@
 body{
     display: flex;
     flex-direction: column;
-    background-color: #f0f8ff;;
+    background-color: rgb(147, 170, 191);
+
+}
+
+main{
     background: url('../imgs/background.png');
+    border-radius: 100% / 0% 0% 10% 10%;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+main > h3 a{
+    background-color: rgb(33,37,42);
 }
 
 .game-nav{
