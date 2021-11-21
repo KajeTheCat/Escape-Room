@@ -14,45 +14,54 @@ body{
 .home-page-body{
     background-size: cover;
     background-repeat:no-repeat;
-    background-color:black;
+    background-color:rgb(20, 20, 20);
 }
 
 main{
     padding-bottom: 4rem;
-    border-radius: 100% / 0% 0% 10% 10%;
+    /* border-radius: 100% / 0% 0% 10% 10%; */
 }
 
 .main-page-body{
     padding-bottom: 33rem;
-    background-image: url('../imgs/sarcophagus.jpeg');
+    background: url('../imgs/sarcophagus.jpeg');
     background-size: cover;
     background-repeat:no-repeat;
-    opacity:0.8;
     display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
-    border-top: 2rem solid black;
+    border-top: 2rem solid rgb(45, 82, 120);
 }
 
-.main-page-body a{
+div a{
     padding: 1rem;
     background-color: slategrey;
     color: rgb(43, 43, 43);
-    margin: 2rem;
-    border-radius: 2px;
-    -webkit-box-shadow: 0 10px 6px -6px #aaf8c8;
-    box-shadow: 0 10px 6px -6px #aaf8c8;
+    margin:2rem;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 10px 6px -6px #c3f7d7;
+    box-shadow: 0 10px 6px -6px #c3f7d7;
+    width: 20rem;
+    display: flex;
+    justify-content: center;
 }
 
-.main-page-body a:hover{
+div a:hover{
     transform: scale(1.05);
     transition-duration: 350ms;
 }
 
-.main-page-body a:active{
+div a:active{
     transform: scale(1);
     transition-duration: 350ms;
+}
+
+.game-buttons{
+    display: flex;
+    margin-top: 15rem;
+    justify-content: space-between;
+    width:900px;
 }
 
 #main-title{
@@ -76,15 +85,58 @@ body h3 a{
 
 h1 {
     text-align: center;
-    font-weight: bolder;
     font-family: "Press Start 2P", cursive;
     -webkit-text-stroke: 2px #34eb7a;
     font-family: "Press Start 2P";
     color: grey;
-    font-size: 50px;
+    font-size: 45px;
     margin:5rem;
-    padding-top: 5rem;
+    padding-top: 10rem;
 }
+
+:root {
+    --characters: 35;
+  }
+  
+  .name-animation{
+    margin-top: 10rem;
+    padding-top:5rem;
+    padding-bottom:5rem;
+    height: 6rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: transparent;
+    font-family: monospace;
+    overflow: hidden;
+  }
+  
+  .typewriter {
+    color:grey;
+    width: 0;
+    padding: 30px 0;
+    font-size: 3rem;
+    overflow: hidden;
+    white-space: nowrap;
+    animation-name: blinking, typing;
+    animation-duration: 0.5s, 5s;
+    animation-timing-function: linear, steps(var(--characters));
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes blinking {
+    from {
+      border-right: 0 solid transparent;
+    }
+  }
+  
+  @keyframes typing {
+    80%, 100% {
+      width: calc(var(--characters) * 0.6ch);
+    }
+  }
 
 #start-game {
     width: 75px;
@@ -145,7 +197,7 @@ div > img {
 
 
 footer{
-    height: 50px;
+    height: 80px;
     background-color: rgb(33,37,42);
 }
 

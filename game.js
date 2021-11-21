@@ -8,7 +8,7 @@ let pyramidFour = document.querySelector('#pyramidFour');
 let tbody = document.querySelector('tbody');
 let victorsDiv = document.querySelector('.victorsDiv');
 let loserDiv = document.querySelector('.loserDiv');
-let userName = '';
+let userName = prompt('What is thy name?');
 let userTimeScore = '';
 let time = '';
 let gamePlayerArr = JSON.parse(localStorage.getItem('victors')) || [];
@@ -99,7 +99,6 @@ function renderVictors() {
 function victory() {
   alert('you have collected the pharoh’s treasure!');
   userTimeScore = time;
-  userName = prompt('What is thy name?');
   instantiateGamePlayer(userName, userTimeScore);
   clearInterval(ticker);
   renderVictors();
@@ -168,7 +167,7 @@ function hallSwitch() {
 }
 
 function sarcoSwitch() {
-  gameRoom.style.background = "url('imgs/sarcophagus.jpeg')";
+  gameRoom.style.background = "url('imgs/sarco.jpg')";
   gameRoom.style.backgroundSize = 'cover';
   gameRoom.style.transitionDuration = '0.5s';
   renderSymbols();
@@ -228,5 +227,30 @@ function renderSymbols() {
   img.style.top = yPos + 'px';
   img.style.left = xPos + 'px';
 }
+
+(function (global) {
+
+  if (typeof (global) === 'undefined') {
+    throw new Error('window is undefined');
+  }
+
+  let _hash = '!';
+  let noBackPlease = function () {
+    global.location.href += '#';
+    global.setTimeout(function () {
+      global.location.href += '!';
+    }, 50);
+  };
+
+  global.onhashchange = function () {
+    if (global.location.hash !== _hash) {
+      global.location.hash = _hash;
+    }
+  };
+
+  global.onload = function () {
+    noBackPlease();
+  };
+})(window);
 
 startTimer(300);

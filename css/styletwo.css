@@ -7,7 +7,7 @@ body{
 
 main{
     background: url('../imgs/background.png');
-    border-radius: 100% / 0% 0% 10% 10%;
+    border-radius: 100% / 0% 0% 12% 12%;
     padding-bottom: 2rem;
     display: flex;
     flex-direction: column;
@@ -110,22 +110,22 @@ span{
 }
 
 .entry{
-    background: url('../imgs/entry.jpg');
+    background:linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url('../imgs/entry.jpg');
     background-size: cover;
 }
 
 .hall{
-    background: url('../imgs/hall.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) ,url('../imgs/hall.jpg');
     background-size: cover;
 }
 
 .sarco{
-    background: url('../imgs/sarcophagus.jpeg');
+    background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) ,url('../imgs/sarco.jpg');
     background-size: cover;
 }
 
 .stairs{
-    background: url('../imgs/stairs.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) ,url('../imgs/stairs.jpg');
     background-size: cover;
 }
 
@@ -207,4 +207,8 @@ td {
 
 a {
     text-decoration: none;
+}
+
+footer{
+    height: 50px;
 }
