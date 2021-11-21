@@ -40,12 +40,11 @@ main{
     color: lightgray;
     margin:2rem;
     border-radius: 5px;
-    -webkit-box-shadow: 0 7px 6px -6px #c3f7d7;
-    box-shadow: 0 7px 6px -6px #c3f7d7;
     width: 20rem;
     display: flex;
     justify-content: center;
     opacity: 0.8;
+    -webkit-text-stroke: 0.8px #34eb7a;
 }
 
 .game-buttons a:hover{
