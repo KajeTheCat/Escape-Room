@@ -30,6 +30,9 @@
         </div>
         <div class='game-div'>
             <div class='game-room'>
+                <div class='room-animation'>
+                    <h2 id='room-name' class='typewriter-room'>Door of Osiris</h2>
+                </div>
                 <img id='symbols'>
             </div>
             <div class='room-options'>
@@ -42,6 +45,16 @@
         <audio controls autoplay loop>
             <source src="../gamesound.mp3" type="audio/mpeg">
         </audio>
+        <div class='winner-div'>
+            <h2>You have collected the Pharaoh’s treasure!</h2>
+            <form id='form'>
+                <fieldset>
+                    <label>
+                        <input type='text' name='name' placeholder="Enter your name" required></label>
+                    <button type='submit' id='submit'>Submit</button>
+                </fieldset>
+            </form>
+        </div>
         <div class="victorsDiv">
             <table class="victorsTable">
                 <thead>
@@ -54,8 +67,8 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td><a href='index.html'>Home</a></td>
-                        <td><a href='credits.html'>About Us</a></td>
+                        <td class='home-button'><a href='index.html'>Home</a></td>
+                        <td class='credits-button'><a href='credits.html'>About Us</a></td>
                     </tr>
                 </tfoot>
             </table>

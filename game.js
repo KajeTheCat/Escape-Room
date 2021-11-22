@@ -5,9 +5,12 @@ let pyramidTwo = document.querySelector('#pyramidTwo');
 let pyramidThree = document.querySelector('#pyramidThree');
 let pyramidFour = document.querySelector('#pyramidFour');
 let tbody = document.querySelector('tbody');
+let winnerDiv = document.querySelector('.winner-div');
 let victorsDiv = document.querySelector('.victorsDiv');
 let loserDiv = document.querySelector('.loserDiv');
-let userName = prompt('What is thy name?');
+let roomName = document.querySelector('#room-name');
+let form = document.querySelector('form');
+let userName = '';
 let userTimeScore = '';
 let time = '';
 let gamePlayerArr = JSON.parse(localStorage.getItem('victors')) || [];
@@ -96,18 +99,30 @@ function renderVictors() {
 }
 
 function victory() {
-  //alert('you have collected the pharoh’s treasure!');
   userTimeScore = time;
   instantiateGamePlayer(userName, userTimeScore);
   clearInterval(ticker);
+  victorsDiv.style.visibility = 'visible';
   renderVictors();
-  victorsDiv.style.display = 'flex';
+}
+
+function submitName(event) {
+  event.preventDefault();
+  userName = event.target.name.value;
+  console.log(userName);
+  winnerDiv.style.display = 'none';
+  victory();
+}
+
+function winner() {
+  winnerDiv.style.display = 'flex';
+  form.addEventListener('submit', submitName);
 }
 
 function renderGreenLight() {
   if (correctAnswerCounter == 4) {
     pyramidFour.style.color = '#34eb7a';
-    victory();
+    winner();
   } else if (correctAnswerCounter == 3) {
     pyramidThree.style.color = '#34eb7a';
   } else if (correctAnswerCounter == 2) {
@@ -152,6 +167,7 @@ let sarco = document.querySelector('.sarco');
 let stairs = document.querySelector('.stairs');
 
 function entrySwitch() {
+  roomName.textContent = 'Door of Osiris';
   gameRoom.style.background = "url('imgs/entry.jpg')";
   gameRoom.style.backgroundSize = 'cover';
   gameRoom.style.transitionDuration = '0.5s';
@@ -159,6 +175,7 @@ function entrySwitch() {
 }
 
 function hallSwitch() {
+  roomName.textContent = 'Cleopatra\'s Den';
   gameRoom.style.background = "url('imgs/hall.jpg')";
   gameRoom.style.backgroundSize = 'cover';
   gameRoom.style.transitionDuration = '0.5s';
@@ -166,6 +183,7 @@ function hallSwitch() {
 }
 
 function sarcoSwitch() {
+  roomName.textContent = 'Ramses\' Tomb';
   gameRoom.style.background = "url('imgs/sarco.jpg')";
   gameRoom.style.backgroundSize = 'cover';
   gameRoom.style.transitionDuration = '0.5s';
@@ -173,15 +191,14 @@ function sarcoSwitch() {
 }
 
 function stairsSwitch() {
+  roomName.textContent = 'Hall of King Tut';
   gameRoom.style.background = "url('imgs/stairs.jpg')";
   gameRoom.style.backgroundSize = 'cover';
   gameRoom.style.transitionDuration = '1s';
   renderSymbols();
 }
 
-window.onload = function () {
-  renderSymbols();
-};
+window.onload = renderSymbols();
 
 entry.addEventListener('click', entrySwitch);
 hall.addEventListener('click', hallSwitch);
