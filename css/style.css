@@ -14,7 +14,69 @@ body{
 .home-page-body{
     background-size: cover;
     background-repeat:no-repeat;
-    background-color:rgb(20, 20, 20);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main-page-div{
+    display:flex;
+    flex-direction: column;
+    background-color: yellow;
+    width:100%;
+    height:100%;
+}
+
+section{
+    visibility: hidden;
+    display:normal;
+    background-image: url('../imgs/entry.jpg');
+    background-repeat:no-repeat;
+    width:0%;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    transition-duration: 1s;
+}
+
+.section-after{
+    visibility: visible;
+    display:normal;
+    background-image: url('../imgs/entry.jpg');
+    background-repeat:no-repeat;
+    width:30%;
+    background-size: cover;
+    background-position: center;
+    transition-duration: 1s;
+    display: flex;
+    flex-direction: column;
+}
+
+section p{
+    display: none;
+    color:black;
+    font-size: 2rem;
+    padding:2rem;
+    margin: 1rem;
+    background-color: white;
+    transition-duration: 1s;
+    opacity: 0.5;
+    line-height: 4rem;
+    transition-duration: 3s;
+}
+
+.pAfter{
+    visibility: visible;
+    display: block;
+    color:black;
+    font-size: 2rem;
+    padding:2rem;
+    margin: 1rem;
+    background-color: white;
+    transition-duration: 1s;
+    opacity: 0.5;
+    line-height: 4rem;
+    transition-duration: 3s;
 }
 
 main{
@@ -22,16 +84,41 @@ main{
     /* border-radius: 100% / 0% 0% 10% 10%; */
 }
 
+.instructionDiv{
+    display: flex;
+    width:100%;
+    justify-content: flex-end;
+}
+
+#instruction-nav{
+    color: lightgray;
+    font-size: 4rem;
+    margin:1rem;
+    cursor: pointer;
+}
+
+#instruction-nav:hover{
+    color:rgb(45, 82, 120);
+}
+
 .main-page-body{
     padding-bottom: 33rem;
     background: url('../imgs/sarcophagus.jpeg');
     background-size: cover;
-    background-repeat:no-repeat;
+    background-position-x: center;
+    background-position-y: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
     border-top: 2rem solid rgb(45, 82, 120);
+    width:100%;
+    transition-duration: 1s;
+}
+
+.main-page-body-after{
+    width:70%;
+    transition-duration: 1s;
 }
 
 .game-buttons a{
