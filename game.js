@@ -293,4 +293,4 @@ function renderSymbols() {
   };
 })(window);
 
-startTimer(0);
+startTimer(600);
