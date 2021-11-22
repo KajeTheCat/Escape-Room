@@ -81,8 +81,32 @@ let questionDb = [
     , answer: 'R'
   }
   , {
-    question: 'What begins with T, ends with T, and is full of T?'
-    , answer: 'Teapot'
+    question: 'What five-letter word becomes shorter when you add two letters to it?'
+    , answer: 'Short'
+  }
+  , {
+    question: 'I am the beginning of everything, the end of everywhere. I’m the beginning of eternity, the end of time and space. What am I?'
+    , answer: 'e'
+  }
+  , {
+    question: 'What 4-letter word can be written forward, backward or upside down, and can still be read from left to right?'
+    , answer: 'noon'
+  }
+  , {
+    question: 'What is the end of everything?'
+    , answer: 'g'
+  }
+  , {
+    question: 'What can run but never walks, has a mouth but never talks, has a head but never weeps, has a bed but never sleeps?'
+    , answer: 'river'
+  }
+  , {
+    question: 'If you drop me I’m sure to crack, but give me a smile and I’ll always smile back. What am I?'
+    , answer: 'mirror'
+  }
+  , {
+    question: 'I turn once, what is out will not get in. I turn again, what is in will not get out. What am I?'
+    , answer: 'key'
   }
 ];
 
