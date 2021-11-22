@@ -1,8 +1,12 @@
 body{
     display: flex;
     flex-direction: column;
-    background-color: rgb(147, 170, 191);
+    background-color: rgb(45, 82, 120);
+}
 
+audio{
+    color: red;
+    background-color:rgb(45, 82, 120);
 }
 
 main{
@@ -103,7 +107,7 @@ span{
 
 
 :root {
-    --characters: 30;
+    --characters: 26;
   }
   
   .room-animation{
@@ -209,7 +213,8 @@ div:focus{
     justify-content: center;
     margin:auto;
     width:500px;
-    background-color:white;
+    background-color: grey;
+    border:3px solid #34eb7a;
     border-radius: 5px;
     z-index: 10;
 }
@@ -223,11 +228,13 @@ div:focus{
     flex-direction: column;
     margin:auto;
     width:500px;
-    background-color:lightgrey;
+    background-color:grey;
     border-radius: 5px;
     z-index: 9;
     align-items: center;
     align-content: center;
+    font-size: 1.7rem;
+    border:3px solid #34eb7a;
 }
 
 .loserDiv > h2,
@@ -236,8 +243,20 @@ margin: 1rem;
 padding: 1rem;
 }
 
+.loserButtons > h3 a{
+    font-size: 1.5rem;;
+    background-color:rgb(45, 82, 120);
+    padding: 5px 1rem;
+    color:white;
+}
+
+.loserButtons h3 a:hover{
+    transform: scale(1.05);
+    color:lime;
+}
+
 .victorsTable {
-    background-color: lightgrey;
+    background-color: grey;
     border-radius: 5px;
     margin: 1rem;
     width: 100%;
@@ -267,7 +286,7 @@ td {
     left: 29%;
     background-size: cover;
     border-radius: 5px;
-    border: 0.05px solid grey;
+    border: 0.05px solid #34eb7a;
     color: white;
     -webkit-text-stroke: 0.5px #34eb7a;
     font-size: 2.5rem;
@@ -277,6 +296,32 @@ td {
     align-content: center;
     align-items: center;
     z-index:7;
+}
+
+#submit{
+    -webkit-text-stroke:0;
+    height: 2rem;
+    width: 5rem;
+    border: none;
+    background-color:rgb(45, 82, 120) ;
+    color: white;
+    border-radius: 5px;
+}
+
+input{
+    height: 1.8rem;
+    border-radius: 5px;
+    width: 15rem;
+    border: none;
+    -webkit-text-stroke:0;
+}
+
+#submit:hover{
+    transform: scale(1.05);
+}
+
+#submit:active{
+    transform: scale(1);
 }
 
 .winner-div h2{
@@ -294,7 +339,7 @@ a {
 }
 
 .home-button a:hover{
-    color:lime;
+    color:#34eb7a;
 }
 
 .home-button a:active{
@@ -308,7 +353,7 @@ a {
 }
 
 .credits-button a:hover{
-    color:lime;
+    color:#34eb7a;
 }
 
 .credits-button a:active{
