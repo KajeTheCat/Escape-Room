@@ -1,5 +1,4 @@
 'use strict';
-
 let symbol = document.querySelector('#symbols');
 let pyramidOne = document.querySelector('#pyramidOne');
 let pyramidTwo = document.querySelector('#pyramidTwo');
@@ -97,7 +96,7 @@ function renderVictors() {
 }
 
 function victory() {
-  alert('you have collected the pharoh’s treasure!');
+  //alert('you have collected the pharoh’s treasure!');
   userTimeScore = time;
   instantiateGamePlayer(userName, userTimeScore);
   clearInterval(ticker);
