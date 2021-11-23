@@ -189,9 +189,9 @@ h1 {
 
 :root {
     --characters: 35;
-  }
-  
-  .name-animation{
+}
+
+.name-animation{
     margin-top: 10rem;
     padding-top:5rem;
     padding-bottom:5rem;
@@ -261,8 +261,8 @@ a {
 }
 
 p {
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 0.5rem;
 }
 
 h2 {
