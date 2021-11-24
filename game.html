@@ -36,10 +36,18 @@
                 <img id='symbols'>
             </div>
             <div class='room-options'>
-                <div class='entry' tabindex='-1'></div>
-                <div class='hall' tabindex='-1'></div>
-                <div class='sarco' tabindex='-1'></div>
-                <div class='stairs' tabindex='-1'></div>
+                <div class='entry' tabindex='-1'>
+                    <h4>Door of Osiris</h4>
+                </div>
+                <div class='hall' tabindex='-1'>
+                    <h4>Ra's Den</h4>
+                </div>
+                <div class='sarco' tabindex='-1'>
+                    <h4>Ramses' Tomb</h4>
+                </div>
+                <div class='stairs' tabindex='-1'>
+                    <h4>Hall of Tut</h4>
+                </div>
             </div>
         </div>
         <audio controls autoplay loop>
@@ -73,7 +81,6 @@
                 </tfoot>
             </table>
         </div>
-
         <div class='loserDiv'>
             <h2>The Pharoah Harvested Your Soul!</h2>
             <div class="loserButtons">
@@ -82,9 +89,51 @@
                 <h3><a href='credits.html'>Credits</a></h3>
             </div>
         </div>
+
+        <section class='game-levels'>
+
+            <section class='maincontainer'>
+                <section class='thecard'>
+                    <section class='thefront'>
+                        <h5>EASY</h5>
+                        <img class='button-img' src='../imgs/medium.png'>
+                    </section>
+                    <section class='theback'>
+                        <p>You have 5 minutes to find the symbols and solve the puzzles before the Pharoah takes your
+                            soul!</p><button id='easy-button'>START</button>
+                    </section>
+                </section>
+            </section>
+
+            <section class='maincontainer'>
+                <section class='thecard'>
+                    <section class='thefront'>
+                        <h5>MEDIUM</h5>
+                        <img class='button-img' src='../imgs/easy.png'>
+                    </section>
+                    <div class='theback'>
+                        <p>You have 3 minutes to find the symbols and solve the puzzles before the Pharoah takes your
+                            soul!</p><button id='medium-button'>START</button></h5>
+                    </div>
+                </section>
+            </section>
+
+            <section class='maincontainer'>
+                <section class='thecard'>
+                    <section class='thefront'>
+                        <h5>HARD</h5>
+                        <img class='button-img' src='../imgs/hard.png'>
+                    </section>
+                    <div class='theback'>
+                        <p>You have 5 minutes to find the symbols and solve the puzzles before the Pharoah takes your
+                            soul!</p><button id='hard-button'>START</button>
+                    </div>
+                </section>
+            </section>
+        </section>
     </main>
     <footer>
-
+        <h3>&copy 2021 Designed and Created by Jacob & JJ</h3>
     </footer>
 </body>
 <script src=" game.js">

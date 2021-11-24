@@ -10,6 +10,11 @@ let victorsDiv = document.querySelector('.victorsDiv');
 let loserDiv = document.querySelector('.loserDiv');
 let roomName = document.querySelector('#room-name');
 let form = document.querySelector('form');
+let gameLevels = document.querySelector('.game-levels');
+let mainContainer = document.querySelectorAll('.maincontainer');
+let easyButton = document.querySelector('#easy-button');
+let mediumButton = document.querySelector('#medium-button');
+let hardButton = document.querySelector('#hard-button');
 let userName = '';
 let userTimeScore = '';
 let time = '';
@@ -199,7 +204,7 @@ function entrySwitch() {
 }
 
 function hallSwitch() {
-  roomName.textContent = 'Cleopatra\'s Den';
+  roomName.textContent = 'Ra\'s Den';
   gameRoom.style.background = "url('imgs/hall.jpg')";
   gameRoom.style.backgroundSize = 'cover';
   gameRoom.style.transitionDuration = '0.5s';
@@ -215,7 +220,7 @@ function sarcoSwitch() {
 }
 
 function stairsSwitch() {
-  roomName.textContent = 'Hall of King Tut';
+  roomName.textContent = 'Hall of Tut';
   gameRoom.style.background = "url('imgs/stairs.jpg')";
   gameRoom.style.backgroundSize = 'cover';
   gameRoom.style.transitionDuration = '1s';
@@ -293,4 +298,34 @@ function renderSymbols() {
   };
 })(window);
 
-startTimer(300);
+easyButton.addEventListener('click', easy);
+mediumButton.addEventListener('click', medium);
+hardButton.addEventListener('click', hard);
+
+
+function easy() {
+  startTimer(300);
+  gameLevels.style.visibility = 'hidden';
+  mainContainer[0].style.visibility = 'hidden';
+  mainContainer[1].style.visibility = 'hidden';
+  mainContainer[2].style.visibility = 'hidden';
+}
+
+function medium() {
+  startTimer(300);
+  gameLevels.style.visibility = 'hidden';
+  mainContainer[0].style.visibility = 'hidden';
+  mainContainer[1].style.visibility = 'hidden';
+  mainContainer[2].style.visibility = 'hidden';
+}
+
+function hard() {
+  startTimer(10);
+  gameLevels.style.visibility = 'hidden';
+  mainContainer[0].style.visibility = 'hidden';
+  mainContainer[1].style.visibility = 'hidden';
+  mainContainer[2].style.visibility = 'hidden';
+}
+
+
+
