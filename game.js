@@ -312,7 +312,7 @@ function easy() {
 }
 
 function medium() {
-  startTimer(300);
+  startTimer(180);
   gameLevels.style.visibility = 'hidden';
   mainContainer[0].style.visibility = 'hidden';
   mainContainer[1].style.visibility = 'hidden';

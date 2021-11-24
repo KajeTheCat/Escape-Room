@@ -473,7 +473,7 @@ visibility: visible;
   height: 100%;
   backface-visibility:hidden;
   -webkit-backface-visibility: hidden;
-  background-color: #333;
+  background-color: rgb(75, 74, 74);
   color: white;
   transform: rotateY(180deg);
   border-radius:5px;
