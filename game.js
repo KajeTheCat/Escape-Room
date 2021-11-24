@@ -320,7 +320,7 @@ function medium() {
 }
 
 function hard() {
-  startTimer(10);
+  startTimer(12);
   gameLevels.style.visibility = 'hidden';
   mainContainer[0].style.visibility = 'hidden';
   mainContainer[1].style.visibility = 'hidden';
