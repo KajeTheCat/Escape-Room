@@ -6,6 +6,10 @@ body{
     font-family: sans-serif;
 }
 
+.body-after{
+    height: 1200px;
+}
+
 .about-us-body{
     color: rgb(43, 43, 43);
     background-color:slategrey;
@@ -30,9 +34,10 @@ body{
 section{
     visibility: hidden;
     display:normal;
-    width:0%;
     transition-duration: 1s;
     background-color:rgb(43, 43, 43);
+    overflow: scroll;
+    width: 0%;
 }
 
 .section-after{
@@ -41,6 +46,12 @@ section{
     transition-duration: 1s;
     display: flex;
     flex-direction: column;
+    height:100%;
+}
+
+.section-after p{
+    overflow-y:scroll;
+    height:65%;
 }
 
 section p{
@@ -125,6 +136,9 @@ main{
 .main-page-body-after{
     width:70%;
     transition-duration: 1s;
+    overflow: hidden;
+    background-size: cover;
+    height:100%;
 }
 
 .game-buttons a{
