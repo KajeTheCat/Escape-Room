@@ -6,6 +6,7 @@ let section = document.querySelector('section');
 let mainPageDiv = document.querySelector('.main-page-body');
 let sectionP = document.querySelector('section p');
 let imgTreasure = document.querySelector('#treasure');
+let body = document.querySelector('body');
 console.log(imgTreasure);
 
 function displayNav() {
@@ -13,6 +14,7 @@ function displayNav() {
     mainPageDiv.classList.toggle('main-page-body-after');
     sectionP.classList.toggle('pAfter');
     imgTreasure.classList.toggle('treasure');
+    body.classList.toggle('body-after');
 }
 
 instructionNav.addEventListener('click', displayNav);
